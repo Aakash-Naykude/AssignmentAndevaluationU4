@@ -5,6 +5,8 @@ const jobSchema = new mongoose.Schema({
     skills:[{type:String, required:true},],
     notice_period:{type: String,required:true},
     no_of_openings:{type:Number, required:true},
+    job_rating:{type:Number, required:true},
+    work_from_home:{type:String, required:true, default:"No"},
     company_details:{
         type: mongoose.Schema.Types.ObjectId,
         required:true,

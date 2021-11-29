@@ -11,6 +11,7 @@ router.post("", async(req, res)=>{
 })
 router.get("", async(req, res)=>{
     try{
+        console.log(req.body)
         const comp = await Company.find().lean().exec()
         res.status(201).send(comp)
     } catch(e){
