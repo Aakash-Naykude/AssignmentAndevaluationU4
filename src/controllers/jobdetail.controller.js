@@ -42,12 +42,20 @@ router.get("/:id", async(req, res)=>{
 })
 
 
+router.get("/:id/companydetails", async(req, res)=>{
+    try{
+        const job = await Job.findById(req.params.id).populate("company_details").lean().exec()
+        res.status(201).send(job)
+    } catch(e){
+        return res.status(500).send({message:e.message, Status: "Failed"})
+    }
+})
 
 
 router.get("/:city/:name", async(req, res)=>{
     try{
         console.log(req.params.name,"Hi")
-        const job = await Job.find({city:{$eq:req.params.name}}).populate("company_details").lean().exec()
+        const job = await Job.find({$or:[{"city":{$eq:req.params.name}},{skills:{$in:[req.params.name,]}}]}).populate("company_details").lean().exec()
         return res.status(201).send(job[0])
     } catch(e){
         return res.status(500).send({message:e.message, Status: "Failed"})
@@ -57,14 +65,6 @@ router.get("/:city/:name", async(req, res)=>{
 
 
 
-router.get("/:id/companydetails", async(req, res)=>{
-    try{
-        const job = await Job.findById(req.params.id).populate("company_details").lean().exec()
-        res.status(201).send(job)
-    } catch(e){
-        return res.status(500).send({message:e.message, Status: "Failed"})
-    }
-})
 router.patch("/:id", async(req, res)=>{
     try{
         const job = await Job.findByIdAndUpdate(req.params.id, req.body, {new: true}).lean().exec()
