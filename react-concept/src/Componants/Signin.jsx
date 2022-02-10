@@ -1,13 +1,13 @@
 import React, { useContext } from "react";
 import { DemoContext } from "../Context/ContextDemo";
 
-function Home() {
+function Signin() {
   const { token, handleToken } = useContext(DemoContext);
   return (
     <div>
       <h1>
         <h1>
-          <h1>Home</h1>
+          <h1>Sign In</h1>
         </h1>
       </h1>
       <button onClick={handleToken}>{token ? "Sign in" : "Sign Out"}</button>
@@ -15,4 +15,4 @@ function Home() {
   );
 }
 
-export default Home;
+export default Signin;
