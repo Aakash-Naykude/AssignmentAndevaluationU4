@@ -80,17 +80,13 @@
   // var n = addTo(4);
   // console.log(n(5));
 
-
-
-  // debounce 
+  // debounce
   // input form user dog dog
   // settimeout 3 4 dog
   // debounce(time, seach)
   // function debounce(time,seahc) settimeinterv((
-    //seach(input)
+  //seach(input)
   //), time)
-
-
 
   //////////////////////////////////////higher order function////////////////////////
   // function sing() {
@@ -122,25 +118,7 @@
   // var abcd = multiple(5);
   // console.log(abcd(5));
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// closuers
-
+  // closuers
 
   // var passed = 3;
   // var addTo = function () {
@@ -157,10 +135,46 @@
   // var n = addTo(4);
   // console.log(n(5));
 
-
   // debounce
   // shampp
   // debounce(time, seach) settime 3
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  /////////////////       constructor function        ///////////////
+
+  let aakash = {
+    gender: "male",
+    DOB:"12 may 789"
+  };
+  aakash.gender = "female";
+  console.log(aakash);
+  function Creator(name, type) {
+    this.name = name;
+    this.type = type;
+    this.work = function(){
+      console.log("yesssssss");
+    }
+    //return this;
+  }
+   let newuser = new Creator("alien", "animal");
+   console.log(newuser.work);
+
+  newuser.name = "child";
+  console.log(newuser);
 </script>
