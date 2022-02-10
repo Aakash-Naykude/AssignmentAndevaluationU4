@@ -139,42 +139,101 @@
   // shampp
   // debounce(time, seach) settime 3
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
   /////////////////       constructor function        ///////////////
 
-  let aakash = {
-    gender: "male",
-    DOB:"12 may 789"
-  };
-  aakash.gender = "female";
-  console.log(aakash);
-  function Creator(name, type) {
+  // let aakash = {
+  //   gender: "male",
+  //   DOB:"12 may 789"
+  // };
+  // aakash.gender = "female";
+  // console.log(aakash);
+  // function Creator(name, type) {
+  //   this.name = name;
+  //   this.type = type;
+  //   this.work = function(){
+  //     console.log("yesssssss");
+  //   }
+  //   //return this;
+  // }
+  //  let newuser = new Creator("alien", "animal");
+  //  console.log(newuser.work);
+
+  // newuser.name = "child";
+  // console.log(newuser);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  //                     this in javascript           //
+  // let obj = {
+  //   title: "a",
+  //   play() {
+  //     console.log(this);
+  //   },
+  // };
+  // obj.stop = function () {
+  //   console.log(this);
+  // };
+  //  obj.play();
+  //  obj.stop();
+
+
+
+
+    function Creator(name, type) {
     this.name = name;
     this.type = type;
     this.work = function(){
-      console.log("yesssssss");
+      console.log(this);
     }
     //return this;
   }
-   let newuser = new Creator("alien", "animal");
-   console.log(newuser.work);
+    let newuser = new Creator("alien", "animal");
+    console.log(newuser.work);
 
-  newuser.name = "child";
-  console.log(newuser);
+  // newuser.name = "child";
+  // console.log(newuser);
 </script>
