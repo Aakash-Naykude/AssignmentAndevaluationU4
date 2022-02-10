@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      .grid-container {
+        display: grid;
+        grid-template-areas:
+          "header header header header header header"
+          "menu main main main right right"
+          "menu footer footer footer footer footer";
+        grid-gap: 10px;
+        background-color: #2196f3;
+        padding: 10px;
+      }
+
+      .grid-container > div {
+        background-color: rgba(255, 255, 255, 0.8);
+        text-align: center;
+        padding: 20px 0;
+        font-size: 30px;
+      }
+      .item1 {
+        grid-area: header;
+      }
+      .item2 {
+        grid-area: menu;
+      }
+      .item3 {
+        grid-area: main;
+      }
+      .item4 {
+        grid-area: right;
+      }
+      .item5 {
+        grid-area: footer;
+      }
+
+    </style>
+  </head>
+  <body>
+    <div class="grid-container">
+      <div class="item1">Header</div>
+      <div class="item2">Menu</div>
+      <div class="item3">Main</div>
+      <div class="item4">Right</div>
+      <div class="item5">Footer</div>
+    </div>
+  </body>
+</html>
+<script>
+  //Html and css
+  // selectors
+
+  // id selctor, class, group, universal, elemnemt
+
+  // combinators==
+
+  // decendants child, adjusant , general adjusant
+
+  // specificity
+  // universal 0
+  // id selectors 100
+  // class 10
+  // inline style 1000
+
+  // p+id == 101  = 1 + 100
+  // p+class == 11 = 1 + 10
+
+  // flex
+
+  // grid
+</script>

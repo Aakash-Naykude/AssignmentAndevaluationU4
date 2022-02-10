@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS explanation</title>
+  </head>
+  <body>
+    <h1>Welcome to JS</h1>
+  </body>
+</html>
+<script>
+  /////////promisses////////////
+  // let p = new Promise((resolve, reject) => {
+  //   let a = 6;
+  //   let b = 5;
+  //   if (a + b == 11) {
+  //     resolve("correct");
+  //   } else {
+  //     reject("wrong number");
+  //   }
+  // });
+
+  // p.then((message) => {
+  //   console.log("the sum is", message);
+  // }).catch((message) => {
+  //   console.log("the sum is", message);
+  // });
+
+  ////////////////////////////////////////////////////////////////
+  // let user = false;
+  // function promisses() {
+  //   return new Promise((resolve, reject) => {
+  //     if (user) {
+  //       resolve("yes user hiii");
+  //     } else {
+  //       reject("byyyy");
+  //     }
+  //   });
+  // }
+  // promisses()
+  //   .then((message) => {
+  //     console.log(message);
+  //   })
+  //   .catch((message) => {
+  //     console.log(message);
+  //   });
+  //////////////
+  // const a = new Promise((resolve, reject) => {
+  //   resolve("a resolved");
+  // });
+  // const b = new Promise((resolve, reject) => {
+  //   resolve("b resolved");
+  // });
+  // const c = new Promise((resolve, reject) => {
+  //   resolve("c resolved");
+  // });
+
+  // Promise.all([a, b, c]).then((messages) => {
+  //   console.log(messages);
+  // });
+  // Promise.race([a, b, c]).then((message) => {
+  //   console.log(message);
+  // });
+  //////////////////////////////////////closuer////////////////////////////
+
+  // var passed = 3;
+  // var addTo = function () {
+  //   var inner = 2;
+  //   return passed + inner;
+  // };
+  // console.log(addTo());
+
+  // var addTo = function (passed) {
+  //   return function (inner) {
+  //     return inner + passed;
+  //   };
+  // };
+  // var n = addTo(4);
+  // console.log(n(5));
+
+
+
+  // debounce 
+  // input form user dog dog
+  // settimeout 3 4 dog
+  // debounce(time, seach)
+  // function debounce(time,seahc) settimeinterv((
+    //seach(input)
+  //), time)
+
+
+
+  //////////////////////////////////////higher order function////////////////////////
+  // function sing() {
+  //   console.log("asdajdkas");
+  // }
+  // function song(sing) {
+  //   console.log("first");
+  //   sing();
+  // }
+  // song(sing);
+
+  // function hello(callback) {
+  //   console.log("first exicution");
+  //   callback();
+  // }
+  // function setUp() {
+  //   hello(function () {
+  //     console.log("hello func");
+  //   });
+  // }
+
+  // setUp()
+  // function multiple(a) {
+  //   return function (b) {
+  //     return a * b;
+  //   };
+  // }
+
+  // var abcd = multiple(5);
+  // console.log(abcd(5));
+</script>
