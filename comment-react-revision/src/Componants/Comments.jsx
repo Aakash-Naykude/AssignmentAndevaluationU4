@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./Comment.css";
-function Comments() {
+function Comments({ getComment }) {
   const [name, setName] = useState("");
   const handleChange = (e) => {
     e.preventDefault();
@@ -23,6 +23,7 @@ function Comments() {
       })
       .then((res) => {
         console.log(res);
+        getComment();
       })
       .catch((err) => {
         console.log(err);
