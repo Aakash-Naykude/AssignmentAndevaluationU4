@@ -1,0 +1,12 @@
+* {
+  background-color: #e1f5fe;
+}
+.comment > input {
+  width: 300px;
+  height: 40px;
+  border-radius: 5px;
+}
+.comment > button {
+  height: 30px;
+  border-radius: 5px;
+}
