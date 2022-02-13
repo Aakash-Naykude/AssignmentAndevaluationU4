@@ -19,6 +19,7 @@ function Reply(props) {
       name: "bot",
       comment: replyFormValue,
     };
+    console.log(payload);
     fetch(`http://localhost:4000/comment/${props.passid}`, {
       method: "PATCH",
       body: JSON.stringify(payload),
