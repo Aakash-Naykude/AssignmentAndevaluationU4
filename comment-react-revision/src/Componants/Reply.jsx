@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 
 function Reply(props) {
   let numberOfNested = 0;
@@ -14,28 +14,21 @@ function Reply(props) {
     e.preventDefault();
     setReplyFormValue(e.target.value);
   };
+
+
+  
+
+
+
+
   const handleAddReply = () => {
     let payload = {
       name: "bot",
       comment: replyFormValue,
+      replies: [],
     };
-    console.log(payload);
-    fetch(`http://localhost:4000/comment/${props.passid}`, {
-      method: "PATCH",
-      body: JSON.stringify(payload),
-      headers: {
-        "Content-Type": "application/json",
-      },
-    })
-      .then((res) => {
-        return res.json();
-      })
-      .then((res) => {
-        console.log(res);
-      })
-      .catch((err) => {
-        console.log(err);
-      });
+    props.replies.push(payload);
+    setShowReplyForm(false);
   };
 
   return (

@@ -26,6 +26,7 @@ function AddComment() {
               passid={e._id}
               getDate={e.createdAt}
               comment={e.comment}
+              reply={e.replies}
             />
           );
         })}
