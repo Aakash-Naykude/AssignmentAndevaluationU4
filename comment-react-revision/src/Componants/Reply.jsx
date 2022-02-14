@@ -15,11 +15,17 @@ function Reply(props) {
     setReplyFormValue(e.target.value);
   };
 
-
-  
-
-
-
+  const nestedComment = (props.reply || []).map((item, index) => {
+    console.log(props.reply);
+    return (
+      <Reply
+        item={props.name}
+        getDate={props.createdAt}
+        comment={props.comment}
+        reply={props.replies}
+      />
+    );
+  });
 
   const handleAddReply = () => {
     let payload = {
@@ -27,7 +33,8 @@ function Reply(props) {
       comment: replyFormValue,
       replies: [],
     };
-    props.replies.push(payload);
+    console.log(props.reply);
+    props.reply.push(payload);
     setShowReplyForm(false);
   };
 
@@ -67,7 +74,7 @@ function Reply(props) {
         )}
       </div>
       {increaseCount()}
-      <div style={{ marginLeft: numberOfNested }}>nestedComment</div>
+      <div style={{ marginLeft: numberOfNested }}>{nestedComment}</div>
     </div>
   );
 }
