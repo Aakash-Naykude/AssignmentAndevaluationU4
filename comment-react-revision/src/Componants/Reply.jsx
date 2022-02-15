@@ -33,6 +33,7 @@ function Reply(props) {
       comment: replyFormValue,
       replies: [],
     };
+    console.log(payload);
     props.reply.push(payload);
     setShowReplyForm(false);
   };
