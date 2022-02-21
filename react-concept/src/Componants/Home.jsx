@@ -5,8 +5,8 @@ function Home() {
   const { token, handleToken } = useContext(DemoContext);
   const [count, setCount] = useState(0);
   useEffect(() => {
-      console.log("Use OF use Effect")
-  },[count]);
+    console.log("Use OF use Effect");
+  }, [count]);
   return (
     <div>
       <h1>
