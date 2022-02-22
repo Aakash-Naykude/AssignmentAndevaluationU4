@@ -1,14 +1,20 @@
-//mongo intro
-var pipeline = [
-    {$sort:{"age":1}}
-]
-db.leads.aggregate(pipeline)
-var pipeline = [
-    {$sort:{"age":-1}},
-    {$limit:3}
-]
-db.leads.aggregate(pipeline)
+// const EventEmitter = require('events')
+// const emitter = new EventEmitter()
 
-//.find().sort({})
 
-//
+// emitter.emit('messageLogged')
+// emitter.on('messageLogged', function(){
+//     console.log("Logged");
+// })
+
+
+router.get('/', logger, function(req, res,next){
+    console.log("firts");
+    res.send("hello")
+    next()
+})
+function logger(req, res, next) {
+    console.log("helloer")
+    next()
+}
+//next()
