@@ -16,3 +16,20 @@ function logger(req, res, next) {
   next();
 }
 //next()
+
+function print(i) {
+  console.log(i);
+  return new Promise((resolve) => {
+    setTimeout((i) => {
+      resolve(i);
+    }, 1000);
+  });
+}
+
+async function callAbove() {
+  for (let i = 1; i < 5; i++) {
+    let res = await print(i);
+    //console.log(res);
+  }
+}
+callAbove();
